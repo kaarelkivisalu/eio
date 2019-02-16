@@ -1,0 +1,11 @@
+set nocp
+set nu rnu
+set wmnu
+syntax enable
+filetype plugin on
+set spr sb
+autocmd Filetype cpp nnoremap <F5> :w <bar> !clear && g++ -std=gnu++11 % -Wall -o %.out && ./%.out<CR>
+set bg=dark
+set ve=onemore
+set ic
+set smd
