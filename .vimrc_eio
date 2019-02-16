@@ -9,3 +9,11 @@ set bg=dark
 set ve=onemore
 set ic
 set smd
+colorscheme gruvbox
+vnoremap <C-c> "+y
+map <C-p> "+P
+autocmd BufWritePre * %s/\s\+$//e
+function LoadFile()
+    0r ~/.vim/templates/skeleton.%:e
+    exe "normal /<CURSOR>\<Cr>df>"
+endf
